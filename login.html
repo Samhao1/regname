@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <!--主体部分-->
+    <div class="nyMain afterClear login_wrap wrap">
+        <div class="sign sign_register">
+            <div class="content">
+                <div id="form_reg" class="auto-form">
+                        <div class="reg_tips">
+                                <span class="reg_head">用户登录</span>
+                                <span><a href="/user/reg?gotourl=https://www.joyintour.com/" class="register">免费注册</a></span>
+                        </div>
+                        <div class="sign_menu">
+                                <a class="normal current" data-item="normal">普通登录</a>
+                                <a class="phone" data-item="sms_code">手机动态密码登录</a>		
+                        </div>
+                        <form class="reg_devision reg_form reg_eamil current" data-item="normal" action="/user/login?action=reg&amp;gotourl=https://www.joyintour.com/" method="post" autocomplete="off">
+                                <input type="hidden" name="login_type" value="normal">
+                                <div class="textbox_ui">
+                                    <!-- <label>邮箱:</label> -->
+                                    <input type="text" required="" autofocus="" placeholder="邮箱/手机" name="loginid" id="loginid" value="" autocomplete="off" class="ui-autocomplete-input reg_email">
+                                    <b></b>
+                                    <p class="text_tip">邮箱/手机(格式为: 国码-手机号)</p>
+                                    <div class="text_error">
+                                        <p class="err_miss">请输入邮箱/手机(格式为: 国码-手机号)</p>
+                                        <p class="err_type">邮箱/手机格式不符合规范</p>
+                                        <p class="err_outher"></p>
+                                    </div>
+                                </div>
+                                <div class="textbox_ui password">
+                                    <!-- <label>密码:</label> -->
+                                    <input type="password" required="" pattern="\S{6,16}" placeholder="密码" value="" name="password" class="reg_pwd">
+                                    <div class="text_error">
+                                        <p class="err_miss">请输入密码</p>
+                                        <p class="err_type">6-16个字符，可以由数字、英文、符号组成</p>
+                                        <p class="err_outher"></p>
+                                    </div>
+                                </div>
+                                <div class="captcha hide">
+                                    <span class="textbox_ui">
+                                        <input type="text" required="" pattern="\S{4}" size="4" maxlength="4" placeholder="验证码" value="" name="captcha" autocomplete="off" class="reg_code">
+                                        <div class="text_error">
+                                            <p class="err_miss">请输入4位验证码</p>
+                                            <p class="err_type">验证码格式错误</p>
+                                            <span class="err_outher"></span>
+                                        </div>
+                                    </span>
+                                    <a href="javascript:">
+                                        <img class="captcha_img" src="">
+                                    </a>
+                                </div>
+                                <div class="other_link">
+                                                    <label class="lbl_autologin">						
+                                        <input type="checkbox" name="autologin" id="autologin" checked="checked">
+                                        <span title="公共场合,切勿选择自动登录">自动登录</span>						
+                                    </label>
+                                                    <span class="fr forget_link"><a href="/user/forget">忘记密码?</a></span>
+                                </div>
+                                <div class="submit">			
+                                    <input type="submit" class="submit_btn" value="立即登录" data-item="normal">
+                                </div>
+                                <!--<div class="third_login">
+                                    <h4 class="title">合作账号登录:</h4>
+                                    <div class="third_login_list">
+                                        <a href="/user/login_third?type=qq" title="QQ登录" class="icon_login qq_login font"></a>
+                                        <a href="/user/login_third?type=sina" title="新浪微博登录" class="icon_login sina_login font" rel="nofollow"></a>
+                                        
+                                    </div>
+                                </div>-->
+                        </form>
+                        <form class="reg_devision reg_form reg_phone" data-item="sms_code" method="post" autocomplete="off" style="display:none;">
+                                <input type="hidden" name="login_type" value="sms_code">
+                                <div class="textbox_ui">
+                                    <select name="tel_code" class="tel_code">
+                                        <option value="86" selected="">中国大陆</option>
+                                        <option value="1">美国</option>
+                                        <option value="886">中国台湾</option>
+                                        <option value="1">加拿大</option>
+                                        <option value="852">中国香港</option>
+                                        <option value="61">澳大利亚</option>
+                                        <option value="44">英国</option>
+                                        <option value="65">新加坡</option>
+                                        <option value="81">日本</option>
+                                        <option value="33">法国</option>
+                                    </select>
+                                    <input type="text" required="" autofocus="" pattern="[0-9]{6,11}" placeholder="请输入手机号" name="mobile_number" size="11" maxlength="11" value="" autocomplete="off" class="ui-autocomplete-input reg_mobile mobile_number">
+                                    <b></b>
+                                    <p class="text_tip">手机号将作为您的登录帐号，用于订单查询等</p>
+                                    <div class="text_error">
+                                        <p class="err_miss">请输入手机号码</p>
+                                        <p class="err_type">输入手机号不符合规范</p>
+                                        <p class="err_outher"></p>
+                                    </div>
+                                </div>
+                                <div class="captcha">
+                                    <span class="textbox_ui">
+                                        <input type="text" required="" pattern="\S{4}" size="4" maxlength="4" placeholder="验证码" value="" name="captcha" autocomplete="off" class="reg_code">
+                                        <div class="text_error">
+                                            <p class="err_miss">请输入4位验证码</p>
+                                            <p class="err_type">验证码格式错误</p>
+                                            <span class="err_outher"></span>
+                                        </div>
+                                    </span>
+                                    <a href="javascript:">
+                                        <img class="captcha_img" src="">
+                                    </a>
+                                </div>
+                                <div class="textbox_ui">
+                                    <a class="send_verify">
+                                        <span>发送手机验证码</span>
+                                    </a>
+                                    <span>
+                                        <input type="text" required="" autofocus="" pattern="[a-zA-Z0-9]{6}" placeholder="请输入手机验证码" name="verify_code" size="6" maxlength="6" value="" autocomplete="off" class="ui-autocomplete-input reg_mobile tel_password verify_code">
+                                        <b></b>
+                                        <p class="text_tip">手机验证码</p>
+                                        <div class="text_error">
+                                            <p class="timer-task">60秒后重新获取</p>
+                                            <p class="err_miss">请输入您收到的验证码</p>
+                                            <p class="err_type">输入的验证码不符合规范</p>
+                                            <p class="err_outher"></p>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="submit">	
+                                    <input type="submit" class="submit_btn" value="立即登录" data-item="sms_code">
+                                </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--底部授权-->
+    <div class="footer copyright2016">
+            <span>Copyright©2010-2018 joyintour.com | <a href="http://www.joyintour.com">欣美途旅游网</a> All rights reserved. | 蜀ICP备14001622号-17| 美国营业执照</span>
+    </div>
+    <script>
+        $(function(){
+            $("#header").load("./header1.html")
+        })
+    </script>
+</body>
+</html>
