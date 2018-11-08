@@ -1,0 +1,300 @@
+/*主体开始*/
+body,img,ul,li,span,a,p{
+    margin:0;
+    padding:0;
+    border:none;
+    font-style:normal;
+    list-style:none;
+    text-decoration:none;
+    font-weight:normal;
+    box-sizing:border-box;
+    font-family: "microsoft yahei","微软雅黑",Arial,Helvetica,sans-serif,Tahoma;
+    color: #000000;
+   }
+
+.wrap_reg {
+    background: url(../img/register/reg.jpg) no-repeat;
+    background-position: 42% 71%;
+    height: 660px;
+}
+
+.sign {
+    background-size: cover;
+    min-width: 320px;
+    line-height: 1.5;
+    font-size: 12px;
+    padding-top: 55px;
+}
+
+
+.login_tips span, .login_tips span a, .reg_tips span, .reg_tips span a {
+    font-family: "Microsoft YaHei";
+    line-height: 30px;
+}
+
+
+.sign_register .content {
+    box-shadow: 5px 5px 5px #999;
+    margin: auto;
+    width: 310px;
+    background: #fff;
+    padding: 20px 45px 25px;
+    position: relative;
+    font-size: 14px;
+    height: 100%;
+    
+}
+.sign_register .content {
+    float: none;
+}
+
+.sign .auto-form {
+    position: relative;
+    width: 320px;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    margin: 0 auto;
+}
+
+.reg_tips {
+    width: 306px;
+}
+
+.reg_tips {
+    text-align: left;
+    margin-bottom: 25px;
+    height:31px;
+}
+
+.login_tips .login_head, .reg_tips .reg_head {
+    font-size: 20px;
+    color: #36BAE8;
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+.reg_tips .has_account{
+    width: 50%;
+    text-align: right;
+    display: block;
+    float:right;
+    color: #999;
+}
+
+.has_account a {
+    font-size: 16px;
+    line-height: 30px;
+    font-family: "ST Song"!important;
+    color: #fe8b06!important;
+}
+
+.sign_register .sign_menu {
+    border-bottom: 1px solid #eee;
+    white-space: nowrap;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+}
+
+.sign_register .sign_menu .current {
+    border-bottom: 2px solid #22c231;
+    color: #22c231;
+}
+
+.sign_register .sign_menu a {
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: top;
+    margin: 0 22px -1px 22px;
+    position: relative;
+    padding: 0;
+}
+
+.sign_register .sign_menu .phone{
+    color:#888;
+}
+
+.sign_register .reg_devision {
+    margin: -10px -90px 0 0;
+    width: min-content;
+}
+
+form{
+    display:block;
+}
+
+.sign_register .reg_devision input {
+    width: 320px;
+    font-family: Arial,Verdana;
+}
+
+.sign .auto-form input {
+    width: 290px;
+    vertical-align: middle;
+    font-family: Arial,Verdana;
+}
+
+.sign div.textbox_ui {
+    margin: 25px 0;
+}
+
+.sign .textbox_ui {
+    vertical-align: middle;
+    white-space: nowrap;
+    width: min-content;
+    position: relative;
+    font-size: 12px;
+}
+
+.sign .textbox_ui>label {
+    display: none;
+    cursor: default;
+}
+
+.sign_register .content input[type="email"] {
+    width: 258px;
+    height: 38px;
+    padding: 0 14px;
+}
+
+.sign .textbox_ui input {
+    border: 1px solid #CCC;
+    line-height: 1.25;
+    padding: 11px 1em;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-size: 13px;
+    display: inline-block;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    font-family: Arial,Verdana,"宋体";
+}
+
+.sign .textbox_ui b {
+    pointer-events: none;
+    position: absolute;
+    margin-top: -8px;
+    display: none;
+    height: 16px;
+    width: 16px;
+    right: 12px;
+    top: 50%;
+    font-weight: bold;
+}
+
+.sign .textbox_ui .text_tip {
+    color: #44a5fc;
+    /* margin-left: 50px; */
+}
+
+.sign .textbox_ui .text_tip, .sign .textbox_ui .text_error {
+    position: absolute;
+    display: none;
+    left: 0;
+    bottom: -18px;
+}
+
+.sign .textbox_ui .text_error {
+    position: absolute;
+    display: none;
+    color: #f60;
+    left: 0;
+    bottom: -18px;
+}
+
+.sign_register .content input[type="password"], .sign_register .content input[type="email"] {
+    width: 258px;
+    height: 38px;
+    padding: 0 14px;
+}
+
+.sign_register .pwd_strength {
+    display: none;
+    color: #49a0df;
+}
+
+.sign .captcha {
+    margin: 25px auto;
+    text-align: left;
+}
+
+.sign_register .content input[type="text"]{
+    width: 258px;
+    height: 38px;
+    padding: 0 14px;
+}
+
+input.reg_code{
+    width: 56px !important;
+}
+
+.sign .captcha img {
+    background: none;
+    width: 60px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 0;
+}
+
+.rules {
+    text-align: left;
+    display: block!important;
+    color: #666;
+    vertical-align: middle;
+}
+
+.rules input {
+    display: inline-block;
+    margin-top: 1px;
+}
+
+.rules input {
+    width: 14px!important;
+}
+
+.sign a {
+    text-decoration: none;
+    color: #36bae8;
+    display: inline-block;
+}
+
+.sign .auto-form .submit_btn {
+    background: #fe8b06;
+    text-align: center;
+    letter-spacing: 4px;
+    margin-top: 35px;
+    font-size: 18px;
+    cursor: pointer;
+    display: block;
+    width: 280px;
+    border-radius: 5px;
+    /* margin-left: 20px; */
+    color: #fff;
+    border: 0;
+    font-family: "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    line-height: 48px;
+}
+
+.footer {
+    background-color: #fff;
+    border-top: 2px solid #b8d68d;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.copyright2016, .copyright2016 a {
+    font-size: 14px;
+    color: #666;
+    font-family: "Microsoft Yahei";
+    text-align: center;
+    text-decoration: none;
+    border-top: 0!important;
+    background: #f5f5f5!important;
+}
+
+
