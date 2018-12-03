@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/register.css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/register.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="nyMain layout afterClear wrap wrap_reg">
+        <div class="sign sign_register">
+        <div class="content">
+            <div id="form_reg" class="auto-form">       
+                <div class="reg_tips">
+                    <span class="reg_head">会员注册</span>
+                    <span class="has_account">已有帐号？<a class="login" href="#">登录</a></span>
+                </div>
+                <div class="sign_menu">
+                    <a class="email current" data-item="email">欢迎注册欣美途</a>	
+                </div>
+                <form class="reg_devision reg_form reg_eamil current"  action="" method="post" autocomplete="off" style="display: block;">
+                    <div class="textbox_ui">
+                        <label>邮箱:</label>
+                        <input type="email"  placeholder="请输入常用邮箱" name="email" id="email" value="" autocomplete="off" class="ui-autocomplete-input reg_email">
+                        <b></b>
+                        <p class="text_tip" id="ema">邮箱将作为您的登录帐号，用于订单查询等</p>
+                        <div class="text_error">
+                            <p class="err_miss">请输入邮箱</p>
+                            <p class="err_type">输入邮箱格式不符合规范</p>
+                            <p class="err_outher"></p>
+                        </div>
+                    </div>
+                    <div class="textbox_ui">
+                        <label>手机:</label>
+                        <input type="phone" placeholder="请输入常用电话" name="phone" id="phone" value="" autocomplete="off" class="ui-autocomplete-input reg_phone">
+                        <b></b>
+                        <p class="text_tip" id="pho">请输入国码格式的手机号</p>
+                        <div class="text_error">
+                            <p class="err_miss">请输入邮箱</p>
+                            <p class="err_type">输入邮箱格式不符合规范</p>
+                            <p class="err_outher"></p>
+                        </div>
+                    </div>
+                    <div class="textbox_ui password">
+                        <label>密码:</label>
+                        <input type="password" pattern="\S{6,16}" placeholder="请输入密码" value="" name="password" class="reg_pwd1">
+                        <div class="text_tip" id="pass1">
+                            <p class="focus_tip">6-16个字符，可以由数字、英文、符号组成</p>
+                            <div class="pwd_strength">
+                                密码安全度：
+                                <div>
+                                    <span class="level"><i></i></span><span class="level2"><i></i></span><span class="level3"><i></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_error">
+                            <p class="err_miss">请输入密码(6-16个字符)</p>
+                            <p class="err_type">6-16个字符，可以由数字、英文、符号组成</p>
+                            <p class="err_outher"></p>
+                        </div>
+                    </div>
+                    <div class="textbox_ui password">
+                        <label>确认密码:</label>
+                        <input type="password" required="" pattern="\S{6,16}" placeholder="请再次输入密码" value="" name="password2" class="reg_pwd">
+                        <div class="text_tip" id="pass2">
+                            <p class="focus_tip">请再次输入密码</p>
+                        </div>
+                        <div class="text_error">
+                            <p class="err_miss">两次输入的密码不匹配</p>
+                            <p class="err_type">6-16个字符，可以由数字、英文、符号组成, 且2次输入的密码必须一致</p>
+                            <p class="err_outher"></p>
+                        </div>
+                    </div>
+                    <!--<div class="textbox_ui realname">
+                        <input type="text" pattern="\S{2,20}" placeholder="请输入姓名" value="" name="realname" id="realname" class="reg_name"/>
+                        <div class="text_tip">
+                            <p class="focus_tip">2-6个汉字，4-12个字符组成</p>
+                        </div>
+                        <div class="text_error">
+                            <p class="err_miss">请输入姓名</p>
+                            <p class="err_type">2-6个汉字，4-12个字符组成</p>
+                            <p class="err_outher"></p>
+                        </div>
+                    </div>-->
+                    <div class="captcha">
+                        <span class="textbox_ui">
+                            <input type="text"  pattern="\S{4}" size="4" maxlength="4" placeholder="验证码" value="" name="captcha" autocomplete="off" class="reg_code">
+                            <div class="text_error">
+                                <p class="err_miss">请输入4位验证码</p>
+                                <p class="err_type">验证码格式错误</p>
+                                <span class="err_outher"></span>
+                            </div>
+                        </span>
+                        <a href="javascript:" style="height: 100%;">
+                            <img style="height: 35px;width: 75px;" class="captcha_img" src="img/register/getcode.gif">
+                        </a>
+                    </div>
+                    <div class="submit">
+                        <span class="rules">
+                            <label><input type="checkbox">同意</label>
+                            <a href="http://www.joyintour.com/help/customer-agreement.htm" target="_blank">《欣美途用户服务条款》</a>
+                        </span>				
+                        <input type="button" class="submit_btn" value="注册" >
+                    </div>
+                </form>
+            </div>  
+        </div>
+        </div>
+    </div>
+    <div class="footer copyright2016">
+        <span>Copyright©2010-2018 joyintour.com | <a href="http://www.joyintour.com">欣美途旅游网</a> All rights reserved. | 蜀ICP备14001622号-17| 美国营业执照</span>
+    </div>
+    <script>
+        $(function(){
+            $("#header").load("./header1.html")
+        })
+    </script>
+</body>
+</html>
